@@ -35,6 +35,10 @@ android {
     lintOptions {
         disable 'GradleDependency'
     }
+    buildFeatures {
+        buildConfig = true
+//        untuk Gradle: 8.0^
+    }
 }
 
 dependencies {
