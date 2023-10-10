@@ -53,3 +53,23 @@ dependencies {
     implementation 'com.google.android.ads.consent:consent-library:1.0.8'
     implementation 'com.github.jitpack:gradle-simple:2.0'
 }
+
+
+
+
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                // Applies the component for the release build variant.
+                from components.release
+                // You can then customize attributes of the publication as shown below.
+                groupId = 'com.github.mirongdev'
+                artifactId = 'demo-sdk-ads'
+                version = '0.0.4'
+                //https://github.com/mirongdev/library-android-basic
+            }
+        }
+    }
+}
